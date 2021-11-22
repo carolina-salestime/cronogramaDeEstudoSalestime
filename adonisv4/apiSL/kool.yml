@@ -1,0 +1,7 @@
+scripts:
+  adonis: kool exec app adonis
+  mysql: kool exec -e MYSQL_PWD=$DB_PASSWORD database mysql -u $DB_USER $DB_DATABASE
+  setup:
+  - kool docker kooldev/node:14 yarn install
+  - kool start
+  yarn: kool exec app yarn
